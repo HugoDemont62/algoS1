@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+}
+
+nav {
+    margin: 0;
+    background-color: black;
+    color: rgb(199, 238, 181);
+    margin-bottom: 30px;
+    position: relative;
+}
+
+nav .right {
+    position: absolute;
+    right: 20px;
+}
+
+nav h1 {
+    width: 40%;
+    padding: 10px;
+}
+
+nav a, nav a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+form {
+    display: inline-block;
+    width: 90%;
+}
+
+#scoreInput {
+    background-image: url('https://www.w3schools.com/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 1.5vw; /* Increase font-size */
+    padding: 1.2vw 1.2vw 1.2vw 50px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+button {
+    background-color: #008CBA; /* Green */
+    border-radius: 0;
+    border: none;
+    color: white;
+    padding: 1.2vw; /* Add some padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5vw;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.card > div:last-child {
+    padding-left: 10px;
+    position: relative;
+}
+
+.card a, .card a:visited {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.card img {
+    width: 100%;
+    background-color: lightgray;
+}
+
+.card .colored {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    background-color: #B74F6F;
+}
+
+.card span {
+    position: absolute;
+    right: 10px;
+    top: 17px;
+}
+
+.card .silver::after {
+    content: "silver";
+    color: silver;
+}
+
+.card .gold::after {
+    content: "gold";
+    color: gold;
+}
+
+.card .bronze::after {
+    content: "bronze";
+    color: #cd7f32;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+main {
+    padding: 2px 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin: 10px auto;
+}
+
+@media screen  and (max-width: 700px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* The Modal (background) */
+#modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+#modal > div:first-child h1 {
+    text-align: center;
+}
+
+#modal > div:first-child #formadd {
+    margin: 0 auto;
+    display: block;
+}
+
+/* Modal Content/Box */
+#modal > div:first-child {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: rgb(194, 77, 77);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* form */
+
+/* Bordered form */
+#formadd {
+    border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+#formadd input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#buttons {
+    text-align: center;
+}
+
+/* Set a css for all buttons */
+#formadd button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+}
+
+/* Add a hover effect for buttons */
+#formadd button:hover {
+    opacity: 0.8;
+}
+
+/* Add padding to containers */
+#formadd {
+    padding: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    #formadd span.psw {
+        display: block;
+        float: none;
+    }
+
+    #formadd .cancelbtn {
+        width: 100%;
+    }
+}
